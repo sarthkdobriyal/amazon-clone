@@ -20,7 +20,7 @@ function Header() {
 
                 {/* Logo */}
             <div className='mt-2 mx-6 flex items-center flex-grow  sm:flex-grow-0'>
-                <Image src="/logo.png" width={100} height={40} style = {{objectFit:"contain"}} className='cursor-pointer '/>
+                <Image src="/logo.png" width={100} height={40} style = {{objectFit:"contain"}} className='cursor-pointer' alt=""/>
             </div>
 
 

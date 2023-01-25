@@ -41,7 +41,7 @@ function Product({id , title, price, description, category, image, rating}) {
         </p>
         
         
-        <Image width={200} height={200} style={{objectFit:"contain"}} src={image} className='mx-auto my-4'  />
+        <Image width={200} height={200} style={{objectFit:"contain"}} src={image} className='mx-auto my-4' alt="" />
 
         
         <h4 className='my-3 font-bold tracking-wide'>{title}</h4>
@@ -52,7 +52,7 @@ function Product({id , title, price, description, category, image, rating}) {
                   {
                   
                   Array(rate).fill().map(( _ , i) => (
-                        <StarIcon className="h-6 text-yellow-600" /> 
+                        <StarIcon key={i} className="h-6 text-yellow-600" /> 
                      ))
                 }
         </div>
