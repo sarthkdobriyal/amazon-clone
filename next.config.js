@@ -3,9 +3,9 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'assets.stickpng.com',
+        hostname: 'png.pngitem.com',
         port: '',
-        pathname: '/images/580b57fcd9996e24bc43c518.png',
+        pathname: '/pimgs/s/1-12001_large-images-amazon-png-logo-vector-amazon-transparent.png',
       },
     ],
   },

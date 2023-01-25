@@ -24,3 +24,6 @@ Tech Stack :
 - NextAuth powering the google authentication
 - Firebase to support the backend database
 - Fake store rest API is used to populate the items
+
+installed -->
+- hero icons for the awesome icons
