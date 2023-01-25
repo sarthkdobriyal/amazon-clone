@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { StarIcon } from '@heroicons/react/solid'
+import Currency from 'react-currency-formatter';
 
 function Product({id , title, price, description, category, image}) {
 
@@ -38,13 +39,21 @@ function Product({id , title, price, description, category, image}) {
             {
                 //Creating empty array of size rating to generate stars
                 Array(rating).fill().map((_, i) => (
-                    <StarIcon className="h-5 text-yellow-600" /> 
+                    <StarIcon key={i} className="h-5 text-yellow-600" /> 
                 ))
             }
         </div>
 
-        
+        <p>{description}</p>
 
+        <div>
+            <Currency quantity={price * 78} currency="INR" />
+        </div>
+
+        {
+            prime &&
+            <img src="https://whitebox.com/wp-content/uploads/2020/05/Prime-tag-.png" alt="" />
+        }
 
     </div>
   )

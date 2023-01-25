@@ -27,3 +27,5 @@ Tech Stack :
 
 installed -->
 - hero icons for the awesome icons
+- react-responsive-carousel for the carousel
+- react-currency-formatter for the currency
