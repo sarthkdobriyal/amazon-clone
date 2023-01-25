@@ -12,26 +12,25 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ products }) {
   return (
-    <div className='bg-gray-100 '>
-      <Head>
+    <>
+    <Head>
         <title>Amazon</title>
         <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/de/Amazon_icon.png?20171005153412" />
       </Head>
       
-        <Header />
 
-        <main className='max-w-screen-2xl mx-auto'> 
+        <main className='max-w-screen-2xl mx-auto bg-gray-100'> 
+        
+          <Header />
            {/* Banner */}
             <Banner />
 
           {/* Product feed */}
-          <Productfeed  products={products} />
+            <Productfeed  products={products} />
 
 
         </main>
-
-      
-    </div>
+    </>
   )
 }
 

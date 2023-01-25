@@ -7,6 +7,10 @@ import {
 
 } from '@heroicons/react/outline'
 
+
+import { useSession, signIn, signOut } from "next-auth/react"
+
+
 function Header() {
   return (
     <header >
@@ -14,8 +18,8 @@ function Header() {
             {/* Top NAv */} 
         <div className='flex items-center bg-amazon_blue p-1 flex-grow py-2 '>
 
-            <div className='mt-2 mx-6 flex items-center flex-grow  sm:flex-grow-0'>
                 {/* Logo */}
+            <div className='mt-2 mx-6 flex items-center flex-grow  sm:flex-grow-0'>
                 <Image src="/logo.png" width={100} height={40} style = {{objectFit:"contain"}} className='cursor-pointer '/>
             </div>
 
@@ -33,7 +37,7 @@ function Header() {
             {/* Right */}
             <div className='mx-6 flex text-white items-center text-xs space-x-6 whitespace-nowrap' >
                     {/* Accoutn */}
-                <div className='  link'>
+                <div onClick={signIn} className='  link'>
                     <p >Hello Sarthak</p>
                     <p className='font-extrabold md:text-sm'>Account & Lists</p>
                 </div>
