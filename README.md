@@ -1,4 +1,6 @@
-This build has everything you expect in the e-commerce app.Feature:
+This build has everything you expect in the e-commerce app.
+
+Featurses:
 
 - Items listed out in a beautiful responsive manner
 - Add items to your basket supported by redux-state management library
@@ -12,7 +14,7 @@ This build has everything you expect in the e-commerce app.Feature:
 - Deployed over vercel
 
 
-Tech Stack:
+Tech Stack :
 
 - ReactJS
 - NextJs framework for server side rendering
