@@ -1,6 +1,6 @@
 This build has everything you expect in the e-commerce app.
 
-Featurses:
+Features:
 
 - Items listed out in a beautiful responsive manner
 - Add items to your basket supported by redux-state management library
