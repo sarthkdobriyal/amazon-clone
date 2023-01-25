@@ -75,7 +75,7 @@ function Header() {
                 Amazon Business
             </p>
             <p className='link'>
-                Today's Deals
+                Today&apos;s Deals
             </p>
             <p className='hidden lg:inline-flex link'>
                 Electronics
