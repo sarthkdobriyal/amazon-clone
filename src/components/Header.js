@@ -32,25 +32,26 @@ function Header() {
             {/* Right */}
             <div className='mx-6 flex text-white items-center text-xs space-x-6 whitespace-nowrap' >
                     {/* Accoutn */}
-                <div className=' cursor-pointer link'>
+                <div className='  link'>
                     <p className=''>Hello Sarthak</p>
-                    <p className=''>Account & Lists</p>
+                    <p className='font-extrabold md:text-sm'>Account & Lists</p>
                 </div>
 
 
 
                     {/* Orderes */}
-                <div className='cursor-pointer link'>
+                <div className=' link'>
                     <p className=''>Returns</p>
-                    <p className=''>& orders</p>
+                    <p className='font-extrabold md:text-sm'>& orders</p>
                 </div>
 
 
 
                     {/* Basket */}
-                <div className='cursor-pointer link'>
+                <div className=' link relative flex items-center '>
+                    <span className='absolute rounded-full bg-[#fedb69] h-4 w-4 flex items-center justify-center font-extrabold text-amazon_blue text-xs top-0 right-0 md:right-10'>3</span>
                     <ShoppingCartIcon className='h-8 text-white'/>
-                    <p className=''>Basket</p>
+                    <p className='hidden md:inline font-extrabold mt-2 md:text-sm'>Basket</p>
                 </div>
             </div>
 
