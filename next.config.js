@@ -3,9 +3,9 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'png.pngitem.com',
+        hostname: 'fakestoreapi.com',
         port: '',
-        pathname: '/pimgs/s/1-12001_large-images-amazon-png-logo-vector-amazon-transparent.png',
+        pathname: '/img/**',
       },
     ],
   },
