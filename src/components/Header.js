@@ -4,18 +4,19 @@ import {
     MenuIcon,
     SearchIcon,
     ShoppingCartIcon,
+
 } from '@heroicons/react/outline'
 
 function Header() {
   return (
-    <header className=' '>
+    <header >
         
             {/* Top NAv */} 
         <div className='flex items-center bg-amazon_blue p-1 flex-grow py-2 '>
 
             <div className='mt-2 mx-6 flex items-center flex-grow  sm:flex-grow-0'>
                 {/* Logo */}
-                <Image src="/logo.png" width={100} height={40} objectFit="contain" className='cursor-pointer '/>
+                <Image src="/logo.png" width={100} height={40} style = {{objectFit:"contain"}} className='cursor-pointer '/>
             </div>
 
 
@@ -33,7 +34,7 @@ function Header() {
             <div className='mx-6 flex text-white items-center text-xs space-x-6 whitespace-nowrap' >
                     {/* Accoutn */}
                 <div className='  link'>
-                    <p className=''>Hello Sarthak</p>
+                    <p >Hello Sarthak</p>
                     <p className='font-extrabold md:text-sm'>Account & Lists</p>
                 </div>
 
