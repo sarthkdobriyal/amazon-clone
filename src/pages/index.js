@@ -19,17 +19,17 @@ export default function Home({ products }) {
       </Head>
       
 
-        <main className='max-w-screen-2xl mx-auto bg-gray-100'> 
+        <div className='max-w-screen-2xl mx-auto bg-gray-100'> 
         
           <Header />
-           {/* Banner */}
+           
             <Banner />
 
-          {/* Product feed */}
+          
             <Productfeed  products={products} />
 
 
-        </main>
+        </div>
     </>
   )
 }
