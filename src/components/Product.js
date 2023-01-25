@@ -51,7 +51,7 @@ function Product({id , title, price, description, category, image, rating}) {
                 {/* //Creating empty array of size rating to generate stars */}
                   {
                   
-                  Array(rate).fill().map(( _ , i) => (
+                  Array(rate).fill().map(( _, i) => (
                         <StarIcon key={i} className="h-6 text-yellow-600" /> 
                      ))
                 }
