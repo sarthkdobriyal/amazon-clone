@@ -22,10 +22,10 @@ function Product({id , title, price, description, category, image, rating}) {
     const MIN_RATING = 1;
     
     //Random generated stars state
-    const [rate, setRate] = useState(
-        // Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
-        Math.floor(rating.rate)
-    );
+    // const [rate, setRate] = useState(
+    //     // Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
+    //     Math.floor(rating.rate)
+    // );
 
 
     //Randomly generated if prime or not
@@ -41,6 +41,7 @@ function Product({id , title, price, description, category, image, rating}) {
         dispatch(addToBasket(prouct))
     }
 
+    
 
 
 
@@ -50,7 +51,7 @@ function Product({id , title, price, description, category, image, rating}) {
         {/* category */}
         
         <p className='absolute top-2 right-2 text-xs italic text-gray-400 tracking-widest '>
-            {category}
+            {category[2]}
         </p>
         
         
@@ -64,7 +65,7 @@ function Product({id , title, price, description, category, image, rating}) {
                 {/* //Creating empty array of size rating to generate stars */}
                   {
                   
-                  Array(rate).fill().map(( _, i) => (
+                  Array(rating).fill().map(( _, i) => (
                         <StarIcon key={i} className="h-6 text-yellow-600" /> 
                      ))
                 }

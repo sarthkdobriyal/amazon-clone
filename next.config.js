@@ -13,6 +13,12 @@ module.exports = {
         port: '',
         pathname: '/wp-content/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'api.lorem.space',
+        port: '',
+        pathname: '/image/**',
+      },
     ],
   },
 }
