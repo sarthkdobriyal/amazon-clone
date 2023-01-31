@@ -5,7 +5,7 @@ module.exports = {
         protocol: 'https',
         hostname: 'fakestoreapi.com',
         port: '',
-        pathname: '/image/**',
+        pathname: '/img/**',
       },
       {
         protocol: 'https',
