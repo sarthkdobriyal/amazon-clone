@@ -6,6 +6,9 @@ import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import Productfeed from '@/components/Productfeed'
 
+import { useSession, signIn, signOut } from "next-auth/react"
+
+
 
 
 const inter = Inter({ subsets: ['latin'] })

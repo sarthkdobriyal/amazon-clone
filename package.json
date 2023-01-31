@@ -17,7 +17,7 @@
     "eslint-config-next": "13.1.5",
     "firebase": "^9.16.0",
     "next": "13.1.5",
-    "next-auth": "^4.18.10",
+    "next-auth": "^4.19.0",
     "react": "18.2.0",
     "react-currency-format": "^1.1.0",
     "react-currency-formatter": "^1.1.0",
