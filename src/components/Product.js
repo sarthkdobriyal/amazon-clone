@@ -36,7 +36,7 @@ function Product({id , title, price, description, category, image, rating}) {
     //Adding Items to the baket
     const addItemToBasket = () => {
         const prouct = {
-            id, title, price,description,category,image
+            id, title, price,description,category,image,rating
         }
         dispatch(addToBasket(prouct))
     }
