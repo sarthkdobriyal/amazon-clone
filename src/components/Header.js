@@ -9,13 +9,14 @@ import {
 
 
 import { useSession, signIn, signOut } from "next-auth/react"
+import { useRouter } from 'next/router'
 
 
 function Header() {
 
 
     const { data: session } = useSession()
-
+    const router = useRouter()
     
 
 
@@ -28,7 +29,7 @@ function Header() {
 
                 {/* Logo */}
             <div className='mt-2 mx-6 flex items-center flex-grow  sm:flex-grow-0'>
-                <Image src="/logo.png" width={100} height={40} style = {{objectFit:"contain"}} className='cursor-pointer' alt=""/>
+                <Image onClick={ () => router.push('/')} src="/logo.png" width={100} height={40} style = {{objectFit:"contain"}} className='cursor-pointer' alt=""/>
             </div>
 
 
@@ -61,7 +62,7 @@ function Header() {
 
 
                     {/* Basket */}
-                <div className=' link relative flex items-center '>
+                <div onClick={() => router.push('/checkout')} className=' link relative flex items-center '>
                     <span className='absolute rounded-full bg-[#fedb69] h-4 w-4 flex items-center justify-center font-extrabold text-amazon_blue text-xs top-0 right-0 md:right-10'>3</span>
                     <ShoppingCartIcon className='h-8 text-white'/>
                     <p className='hidden md:inline font-extrabold mt-2 md:text-sm'>Basket</p>
