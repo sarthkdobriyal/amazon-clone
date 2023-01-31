@@ -2,9 +2,14 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { StarIcon } from '@heroicons/react/solid'
 import Currency from 'react-currency-formatter';
+import { useDispatch } from 'react-redux';
+import { addToBasket } from '@/slices/basketSlice';
 
 function Product({id , title, price, description, category, image, rating}) {
     
+
+    const dispatch = useDispatch();
+
     useEffect(() => {
         setHasPrime(
             //If less than 0.5 means true otherwise false
@@ -27,6 +32,14 @@ function Product({id , title, price, description, category, image, rating}) {
     const [hasPrime, setHasPrime] = useState(
         false
     )
+
+    //Adding Items to the baket
+    const addItemToBasket = () => {
+        const prouct = {
+            id, title, price,description,category,image
+        }
+        dispatch(addToBasket(prouct))
+    }
 
 
 
@@ -81,7 +94,7 @@ function Product({id , title, price, description, category, image, rating}) {
 
 
         
-        <button className='mt-auto button'>Add to Basket</button>
+        <button onClick={addItemToBasket} className='mt-auto button'>Add to Basket</button>
        
 
 

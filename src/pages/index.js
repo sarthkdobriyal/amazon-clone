@@ -11,6 +11,10 @@ import { useSession, signIn, signOut } from "next-auth/react"
 
 
 
+
+
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ products }) {

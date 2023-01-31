@@ -2,7 +2,14 @@ import Header from '@/components/Header'
 import React from 'react'
 import Image from 'next/image';
 
+import { useSelector } from 'react-redux';
+import { removeFromBasket, selectItems } from '@/slices/basketSlice';
+
 function checkout() {
+
+    const items = useSelector(selectItems);
+
+
   return (
     <div className='bg-gray-100'>
         <Header />
