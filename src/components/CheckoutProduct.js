@@ -24,23 +24,27 @@ function CheckoutProduct({
         {/* Letf image */}
         <Image
         src={image}
-        width={200}
-        height={300}
+        width={170}
+        height={200}
         style={{objectFit:"contain"}}
         />
         {/* middle descripyion  */}
         <div className='sol-span-3 mx-5'>
-            <p>{title}</p>
+            <p className='text-sm'>{title}</p>
             <div className='flex'>
             
             {/* //Creating empty array of size rating to generate stars */}
               {
               
               Array(rate).fill().map(( _, i) => (
-                    <StarIcon key={i} className="h-6 text-yellow-600" /> 
+                    <StarIcon key={i} className="h-4 text-yellow-600" /> 
                  ))
             }
-    </div>
+            </div>
+            <p className='text-xs my-2 line-clamp-3'>{description}</p>
+
+
+
         </div>
         {/* right  */}
     </div>
