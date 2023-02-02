@@ -31,5 +31,5 @@ installed -->
 - react-currency-formatter for the currency
 - stripe / @stripe/stripe-js for the payment
 - axios for the backend and stripe payment functionality
-
-
+- micro for the webhook
+- firebase-admin which runs on the server side to interact with the DB
