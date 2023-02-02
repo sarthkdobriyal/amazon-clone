@@ -1,15 +1,20 @@
 import Header from '@/components/Header'
 import React from 'react'
 import Image from 'next/image';
-
+import Currency from 'react-currency-formatter';
 import { useSelector } from 'react-redux';
-import { removeFromBasket, selectItems } from '@/slices/basketSlice';
+import { removeFromBasket, selectItems, selectTotal } from '@/slices/basketSlice';
 import CheckoutProduct from '@/components/CheckoutProduct';
+import { useSession } from 'next-auth/react';
 
 function checkout() {
 
     const items = useSelector(selectItems);
-    console.log(items)
+
+    const total = useSelector(selectTotal)
+
+    const session = useSession(); 
+    
 
   return (
     <div className='bg-gray-100'>
@@ -58,7 +63,28 @@ function checkout() {
 
 
             {/* right section */}
-            <div></div>
+            <div className='flex-col flex bg-white p-12 shadow-md'>
+
+                {
+                    (items.length>0)  &&
+                    (<>
+                        <h2 className='whitespace-nowrap'>Subtotal ({items.length} items):{' '}
+                        <span className='font-bold'>
+                            <Currency quantity={total} currency="INR"></Currency>
+                        </span>
+                        </h2>
+
+                        <button 
+                            disabled={!session}
+                        className={`button w-full mt-2 ${!session && 'from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed'}` } >
+                            {
+                                !session ? 'SignIn to Checkout' :
+                                "Proceed to Checkout"
+                            }
+                        </button>
+                    </>)
+                }
+            </div>
 
         </main>
     </div>
