@@ -7,7 +7,7 @@ import { removeFromBasket, selectItems, selectTotal } from '@/slices/basketSlice
 import CheckoutProduct from '@/components/CheckoutProduct';
 import { useSession } from 'next-auth/react';
 
-function checkout() {
+function Checkout() {
 
     const items = useSelector(selectItems);
 
@@ -91,4 +91,4 @@ function checkout() {
   )
 }
 
-export default checkout
+export default Checkout
