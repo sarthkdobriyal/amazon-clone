@@ -6,8 +6,9 @@ export const authOptions = {
     GoogleProvider({
         clientId: process.env.GOOGLE_ID,
         clientSecret: process.env.GOOGLE_SECRET
-      })
+      }),
     // ...add more providers here
   ],
+  secret:process.env.NEXT_PUBLIC_SECRET,
 }
 export default NextAuth(authOptions)
