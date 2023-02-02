@@ -5,12 +5,11 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 export default async (req,res) => {
     const { items, email } = req.body;
     //Need to transform the array of objects(items) into a format that stripe would understand
-    const transformedItems = items.map((item) => ({
-        
+    const transformedItems = items.map((item) => ({ 
         quantity:1,
         price_data:{
             currency:"inr",
-            unit_amount:item.price*78,
+            unit_amount:(Math.floor(item.price*78)*100),
             product_data: {
                 name: item.title,
                 description:item.description,
