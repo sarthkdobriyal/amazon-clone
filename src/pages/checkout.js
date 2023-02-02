@@ -3,9 +3,15 @@ import React from 'react'
 import Image from 'next/image';
 import Currency from 'react-currency-formatter';
 import { useSelector } from 'react-redux';
-import { removeFromBasket, selectItems, selectTotal } from '@/slices/basketSlice';
+import {  selectItems, selectTotal } from '@/slices/basketSlice';
 import CheckoutProduct from '@/components/CheckoutProduct';
 import { useSession } from 'next-auth/react';
+import { loadStripe } from '@stripe/stripe-js';
+const axios = require('axios')
+
+
+const stripePromise = loadStripe(process.env.stripe_public_key);
+
 
 function Checkout() {
 
@@ -13,7 +19,29 @@ function Checkout() {
 
     const total = useSelector(selectTotal)
 
-    const session = useSession(); 
+    const { data: session } = useSession()
+
+    //On clicking the button this function will send all the data of the products to the stripe and create a checkout session for payment
+    const createCheckoutSession = async () => {   
+        const stripe = await stripePromise;
+        
+        //call the backend to create a checkut session in api folder
+        const checkoutSession = await axios.post('/api/create-checkout-session', {
+            items,
+            email:session.user.email,
+        })
+
+        // Redirect the user to stripe checkout
+        const result = stripe.redirectToCheckout({
+            sessionId: checkoutSession.data.id,
+        })
+
+        if(result.error){
+            alert(result.error.message)
+        }
+
+
+    }
     
 
   return (
@@ -75,6 +103,8 @@ function Checkout() {
                         </h2>
 
                         <button 
+                            role="link"
+                            onClick={createCheckoutSession}
                             disabled={!session}
                         className={`button w-full mt-2 ${!session && 'from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed'}` } >
                             {

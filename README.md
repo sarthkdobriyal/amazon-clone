@@ -29,3 +29,7 @@ installed -->
 - hero icons for the awesome icons
 - react-responsive-carousel for the carousel
 - react-currency-formatter for the currency
+- stripe / @stripe/stripe-js for the payment
+- axios for the backend and stripe payment functionality
+
+
