@@ -9,7 +9,7 @@ import CheckoutProduct from '@/components/CheckoutProduct';
 function checkout() {
 
     const items = useSelector(selectItems);
-    console.log(items);
+    console.log(items)
 
   return (
     <div className='bg-gray-100'>
@@ -40,6 +40,7 @@ function checkout() {
                                     rating={item.rating}
                                     category={item.category}
                                     image={item.image}
+                                    hasPrime={item.hasPrime}
                                 />
                             )
                         })
