@@ -30,8 +30,8 @@ function Header() {
         <div className='flex items-center bg-amazon_blue p-1 flex-grow py-2 '>
 
                 {/* Logo */}
-            <div className='mt-2 mx-6 flex items-center flex-grow  sm:flex-grow-0'>
-                <Image onClick={ () => router.push('/')} src="/logo.png" width={100} height={40} style = {{objectFit:"contain"}} className='cursor-pointer' alt=""/>
+            <div onClick={ () => router.push('/')} className='mt-2 mx-6 flex items-center flex-grow  sm:flex-grow-0'>
+                <Image  src="/logo.png" width={100} height={40} style = {{objectFit:"contain"}} className='cursor-pointer' alt=""/>
             </div>
 
 
@@ -77,7 +77,7 @@ function Header() {
 
 
             {/* bottom nav */}
-        <div className='text-white flex items-center space-x-3 p-1 pl-6 bg-amazon_blue-light text-xs '>
+        <div onClick={ () => router.push('/')} className='text-white flex items-center space-x-3 p-1 pl-6 bg-amazon_blue-light text-xs '>
             <p className='link flex items-center'>
                 <MenuIcon className='h-6 mr-1' />
                 All
