@@ -91,7 +91,7 @@ function Checkout() {
 
 
             {/* right section */}
-            <div className='flex-col flex bg-white p-12 shadow-md'>
+            <div className='flex-col flex bg-white p-12 shadow-md mt-5'>
 
                 {
                     (items.length>0)  &&
