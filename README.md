@@ -1,7 +1,7 @@
 # An E-commerce app build with Reactjs and nextjs
 ## This build has everything you expect in the e-commerce app.
 
-##Features:
+## Features:
 
 - Items listed out in a beautiful responsive manner
 - Add items to your basket supported by redux-state management library
@@ -15,8 +15,7 @@
 - Deployed over vercel
 
 
-##Tech Stack :
-
+## Tech Stack :
 - ReactJS
 - NextJs framework for server side rendering
 - Tailwind css for the responsive beautiful UI/UX
@@ -26,7 +25,8 @@
 - Firebase to support the backend database
 - Fake store rest API is used to populate the items
 
-##installed -->
+
+## installed dependencies -->
 - hero icons for the awesome icons
 - react-responsive-carousel for the carousel
 - react-currency-formatter for the currency
