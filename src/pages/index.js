@@ -51,7 +51,6 @@ export default function Home({ products }) {
         
           <Header searchItem={searchItem} 
                   setSearchItem={setSearchItem}
-                  categoryItems={categoryItems}
                   setCategoryItems={setCategoryItems}
                   />
            

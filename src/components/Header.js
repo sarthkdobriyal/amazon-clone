@@ -14,7 +14,7 @@ import { selectItems } from '@/slices/basketSlice'
 import { useSelector } from 'react-redux'
 
 
-function Header({searchItem, setSearchItem, categoryItems, setCategoryItems}) {
+function Header({searchItem, setSearchItem,  setCategoryItems}) {
 
 
     const { data: session } = useSession()
@@ -28,6 +28,9 @@ function Header({searchItem, setSearchItem, categoryItems, setCategoryItems}) {
         setSearchItem(e.target.value);
     } 
 
+    const handleHome = () =>  {
+        setCategoryItems("");
+    }
     
 
   return (
@@ -90,13 +93,13 @@ function Header({searchItem, setSearchItem, categoryItems, setCategoryItems}) {
                 All
             </p>
             
-            <p className='link' onClick={ () => router.push('/')}>
+            <p className='link' onClick={ () => handleHome()}>
                 Prime Video
             </p>
-            <p className='link' onClick={ () => router.push('/')}>
+            <p className='link' onClick={ () => handleHome()}>
                 Amazon Business
             </p>
-            <p className='link' onClick={ () => router.push('/')}>
+            <p className='link' onClick={ () => handleHome()}>
                 Today&apos;s Deals
             </p>
             <p className='hidden lg:inline-flex link' onClick={() => setCategoryItems("electronics")}>
@@ -108,13 +111,13 @@ function Header({searchItem, setSearchItem, categoryItems, setCategoryItems}) {
             <p className='hidden lg:inline-flex link' onClick={() => setCategoryItems("jewelery")}>
                 Jewelery
             </p>
-            <p className='hidden lg:inline-flex link' onClick={ () => router.push('/')}>
+            <p className='hidden lg:inline-flex link' onClick={ () => handleHome()}>
                 Buy Again
             </p>
-            <p className='hidden lg:inline-flex link' onClick={ () => router.push('/')}>
+            <p className='hidden lg:inline-flex link' onClick={ () => handleHome()}>
                 Shopper Toolkit
             </p>
-            <p className='hidden lg:inline-flex link' onClick={ () => router.push('/')}>
+            <p className='hidden lg:inline-flex link' onClick={ () => handleHome()}>
                 Health & Personal Care
             </p>
 
