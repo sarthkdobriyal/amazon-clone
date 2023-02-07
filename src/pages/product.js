@@ -6,6 +6,7 @@ import Currency from 'react-currency-formatter';
 import { MapIcon } from '@heroicons/react/solid';
 import { useDispatch } from 'react-redux';
 import { addToBasket } from '@/slices/basketSlice';
+import Footer from '@/components/Footer';
 
 
 const Product = ({id , title, price, description, category, image, rating}) => {
@@ -118,6 +119,8 @@ const Product = ({id , title, price, description, category, image, rating}) => {
                 
 
         </div>
+        {/* Footer */}
+        <Footer />
     </div>
   )
 }

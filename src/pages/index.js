@@ -7,6 +7,7 @@ import Banner from '@/components/Banner'
 import Productfeed from '@/components/Productfeed'
 
 import { useSession, signIn, signOut, getSession } from "next-auth/react"
+import Footer from '@/components/Footer'
 
 
 
@@ -36,7 +37,7 @@ export default function Home({ products }) {
           
             <Productfeed  products={products} />
 
-
+            <Footer />
         </div>
     </>
   )

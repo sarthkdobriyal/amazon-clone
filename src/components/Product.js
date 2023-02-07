@@ -53,7 +53,7 @@ function Product({id , title, price, description, category, image, rating}) {
         {/* category */}
         
         <p className='absolute top-2 right-2 text-xs italic text-gray-400 tracking-widest '>
-            {category[2]}
+            {category}
         </p>
         
         
