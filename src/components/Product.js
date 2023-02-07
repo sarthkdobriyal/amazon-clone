@@ -4,6 +4,7 @@ import { StarIcon } from '@heroicons/react/solid'
 import Currency from 'react-currency-formatter';
 import { useDispatch } from 'react-redux';
 import { addToBasket } from '@/slices/basketSlice';
+import Link from 'next/link';
 
 function Product({id , title, price, description, category, image, rating}) {
     
@@ -47,6 +48,7 @@ function Product({id , title, price, description, category, image, rating}) {
 
   return (
     <div className='relative flex flex-col m-5 bg-white z-30 p-10 rounded-lg '>
+        <Link href={{ pathname: '/product', query: { id: id } }}>
 
         {/* category */}
         
@@ -59,6 +61,7 @@ function Product({id , title, price, description, category, image, rating}) {
 
         
         <h4 className='my-3 font-bold tracking-wide'>{title}</h4>
+        </Link>
 
         <div className='flex'>
             
@@ -98,7 +101,7 @@ function Product({id , title, price, description, category, image, rating}) {
         <button onClick={addItemToBasket} className='mt-auto button'>Add to Basket</button>
        
 
-
+        
     </div>
   )
 }

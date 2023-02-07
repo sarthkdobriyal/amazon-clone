@@ -13,6 +13,12 @@ module.exports = {
         port: '',
         pathname: '/wp-content/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com',
+        port: '',
+        pathname: '/images/G/31/A2I-Convert/mobile/IconFarm/**',
+      },
       
     ],
   },
