@@ -26,7 +26,7 @@ const Product = ({id , title, price, description, category, image, rating}) => {
     );
     
   return (
-    <div className='overflow-hidden border-b mb-2'>
+    <div className='overflow-hidden border-b mb-8'>
         <Header />
         <div className='px-2 text-sm my-2 text-gray-700'>{category + " > " + title} </div>
         <div className='flex flex-grow h-screen w-screen'>
