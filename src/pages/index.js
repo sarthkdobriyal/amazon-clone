@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import Productfeed from '@/components/Productfeed'
 
-import { useSession, signIn, signOut, getSession } from "next-auth/react"
+import {  getSession } from "next-auth/react"
 import Footer from '@/components/Footer'
+import { useState } from 'react'
 
 
 
@@ -19,7 +19,13 @@ import Footer from '@/components/Footer'
 
 
 export default function Home({ products }) {
-  
+
+  const [searchItem , setSearchItem] = useState("");
+  let searchProducts = products.filter((product) => {
+    return product.title.toLowerCase().includes(searchItem.toLowerCase())
+     
+  })
+  console.log(searchProducts)
   return (
     <>
     <Head>
@@ -30,12 +36,12 @@ export default function Home({ products }) {
 
         <div className='max-w-screen-2xl mx-auto bg-gray-100'> 
         
-          <Header />
+          <Header searchItem={searchItem} setSearchItem={setSearchItem}/>
            
             <Banner />
 
           
-            <Productfeed  products={products} />
+            <Productfeed  products={searchItem.length > 0 ? searchProducts : products} />
 
             <Footer />
         </div>

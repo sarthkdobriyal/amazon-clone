@@ -3,7 +3,6 @@ import Header from '@/components/Header'
 import Image from 'next/image';
 import { StarIcon } from '@heroicons/react/solid';
 import Currency from 'react-currency-formatter';
-import { MapIcon } from '@heroicons/react/solid';
 import { useDispatch } from 'react-redux';
 import { addToBasket } from '@/slices/basketSlice';
 import Footer from '@/components/Footer';
@@ -27,7 +26,7 @@ const Product = ({id , title, price, description, category, image, rating}) => {
     );
     
   return (
-    <div className='overflow-y-hidden border-b pb-2'>
+    <div className='overflow-hidden border-b mb-2'>
         <Header />
         <div className='px-2 text-sm my-2 text-gray-700'>{category + " > " + title} </div>
         <div className='flex flex-grow h-screen w-screen'>

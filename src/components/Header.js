@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import {
     MenuIcon,
@@ -14,14 +14,20 @@ import { selectItems } from '@/slices/basketSlice'
 import { useSelector } from 'react-redux'
 
 
-function Header() {
+function Header({searchItem, setSearchItem}) {
 
 
     const { data: session } = useSession()
     const router = useRouter()
     const items = useSelector(selectItems);
 
+    const [searchValue , setSearchValue] = useState("");
 
+    const handleSearch = (e) => {
+        setSearchItem(e.target.value);
+    } 
+
+    console.log(searchValue);
 
   return (
     <header >
@@ -39,7 +45,7 @@ function Header() {
             <div className='hidden sm:flex items-center h-10 flex-grow cursor-pointer bg-[#fedb69] hover:bg-[#c6a743] rounded-lg ' >
 
                 <input type="text" placeholder='Search Amazon' 
-                className='rounded-l-lg p-2 h-full w-6 flex-grow flex-shrink focus:outline-none px-4' />
+                className='rounded-l-lg p-2 h-full w-6 flex-grow flex-shrink focus:outline-none px-4' value={searchItem} onChange={(e) => handleSearch(e)} />
                 <SearchIcon className="h-12  p-3 text-amazon_blue" />
 
             </div>
