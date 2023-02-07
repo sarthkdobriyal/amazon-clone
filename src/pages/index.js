@@ -21,10 +21,23 @@ import { useState } from 'react'
 export default function Home({ products }) {
 
   const [searchItem , setSearchItem] = useState("");
-  let searchProducts = products.filter((product) => {
-    return product.title.toLowerCase().includes(searchItem.toLowerCase())
-     
-  })
+  const [categoryItems, setCategoryItems] = useState("");
+
+  let searchProducts = [];
+  if(categoryItems.length > 0){
+     searchProducts = products.filter((product) => {
+      return product.category.toLowerCase().includes(categoryItems.toLowerCase())
+      
+    })
+  }else{
+
+     searchProducts = products.filter((product) => {
+      return product.title.toLowerCase().includes(searchItem.toLowerCase())
+      
+    })
+  }
+
+  console.log(categoryItems);
   
   return (
     <>
@@ -36,12 +49,16 @@ export default function Home({ products }) {
 
         <div className='max-w-screen-2xl mx-auto bg-gray-100'> 
         
-          <Header searchItem={searchItem} setSearchItem={setSearchItem}/>
+          <Header searchItem={searchItem} 
+                  setSearchItem={setSearchItem}
+                  categoryItems={categoryItems}
+                  setCategoryItems={setCategoryItems}
+                  />
            
             <Banner />
 
           
-            <Productfeed  products={searchItem.length > 0 ? searchProducts : products} />
+            <Productfeed  products={searchProducts.length > 0 ? searchProducts : products} />
 
             <Footer />
         </div>
