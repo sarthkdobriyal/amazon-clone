@@ -27,7 +27,7 @@ function Header({searchItem, setSearchItem}) {
         setSearchItem(e.target.value);
     } 
 
-    console.log(searchValue);
+    
 
   return (
     <header >

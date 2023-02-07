@@ -25,7 +25,7 @@ export default function Home({ products }) {
     return product.title.toLowerCase().includes(searchItem.toLowerCase())
      
   })
-  console.log(searchProducts)
+  
   return (
     <>
     <Head>
