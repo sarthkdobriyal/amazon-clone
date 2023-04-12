@@ -56,7 +56,7 @@ Implemented Firebase Firestore as the backend database, supporting the storage o
 Deployed the app on Vercel, ensuring high availability and scalability.
 
 
-## installed dependencies -->
+# Third Party Dependencies 
 - hero icons for the awesome icons
 - react-responsive-carousel for the carousel
 - react-currency-formatter for displaying currency
@@ -65,7 +65,7 @@ Deployed the app on Vercel, ensuring high availability and scalability.
 - micro for the webhook
 - firebase-admin which runs on the server side to interact with the DB
 
-How to use the app:
+## How to use the app:
 1. When you first open the app, you'll land on the homepage where you can view all the items available to buy in the store (using fake items).
 2. To make a purchase or create a basket, you need to sign in to the app.
 3. Click on the sign-in button located next to the search icon.
